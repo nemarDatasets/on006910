@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "dataset_id": "on006910",
-  "source": "openneuro",
-  "source_id": "ds006910",
+  "pipeline_stage": "validated",
   "title": "Auditory Naming EC",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Ryuzaburo Kochi": {},
     "Aya Kanno": {},
@@ -16,26 +16,64 @@
     "Aimee F. Luat": {},
     "Eishi Asano": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds006910.v1.0.1",
       "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on006910",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on006910",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
-  ],
-  "pipeline_stage": "seeded",
-  "bids_version": "1.7.0",
-  "recording_modality": [
-    "ieeg"
-  ],
-  "datatypes": [
-    "ieeg"
   ],
   "funding_references": [
     {
       "funder_name": "N/A"
     }
-  ]
+  ],
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "47.9 GB (385 files)"
+  ],
+  "formats": [
+    ".edf",
+    ".json",
+    ".md",
+    ".tsv",
+    ".yml"
+  ],
+  "description": "This dataset comprises intracranial EEG recordings from 121 individuals performing an auditory-naming task. Electrode coordinates are provided in MNI-305 stereotactic space. The dataset includes event markers for stimulus onset, stimulus offset, and response onset, enabling analysis of neural dynamics during speech production and auditory processing.",
+  "methods_description": "Intracranial EEG recordings were acquired during an auditory-naming task. Event codes mark stimulus onset (401), stimulus offset (402), and response onset (501). Electrode coordinates are registered to MNI-305 space.",
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "electrocorticography"
+    },
+    {
+      "term": "auditory naming"
+    },
+    {
+      "term": "speech production"
+    },
+    {
+      "term": "effective connectivity"
+    },
+    {
+      "term": "stereotactic space"
+    }
+  ],
+  "source_hash": "3ff2ee9749d7ed2273860f3d8e291d02b6b45259daa6de883b03359dcdf0b06e"
 }
