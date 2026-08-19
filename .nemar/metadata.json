@@ -2,6 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Auditory Naming EC",
+  "description": "This dataset contains intracranial EEG recordings from 121 individuals who performed an auditory-naming task, with electrode coordinates provided in MNI-305 space. The data support analyses of whole-brain, millisecond-scale effective connectivity underlying speech processing, as reported by Kochi et al. (2025).",
+  "methods_description": "Intracranial EEG recordings were collected while participants performed an auditory-naming task, with events tagged for stimulus onset (401), stimulus offset (402), and response onset (501). Electrode locations were co-registered to MNI-305 standard space.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -16,6 +18,28 @@
     "Aimee F. Luat": {},
     "Eishi Asano": {}
   },
+  "keywords": [
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "auditory naming task"
+    },
+    {
+      "term": "effective connectivity"
+    },
+    {
+      "term": "speech"
+    },
+    {
+      "term": "MNI-305 space"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds006910.v1.0.1",
@@ -39,10 +63,10 @@
     }
   ],
   "resource_type_general": "Dataset",
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
     "47.9 GB (385 files)"
   ],
@@ -52,28 +76,6 @@
     ".md",
     ".tsv",
     ".yml"
-  ],
-  "description": "This dataset comprises intracranial EEG recordings from 121 individuals performing an auditory-naming task. Electrode coordinates are provided in MNI-305 stereotactic space. The dataset includes event markers for stimulus onset, stimulus offset, and response onset, enabling analysis of neural dynamics during speech production and auditory processing.",
-  "methods_description": "Intracranial EEG recordings were acquired during an auditory-naming task. Event codes mark stimulus onset (401), stimulus offset (402), and response onset (501). Electrode coordinates are registered to MNI-305 space.",
-  "keywords": [
-    {
-      "term": "intracranial EEG"
-    },
-    {
-      "term": "electrocorticography"
-    },
-    {
-      "term": "auditory naming"
-    },
-    {
-      "term": "speech production"
-    },
-    {
-      "term": "effective connectivity"
-    },
-    {
-      "term": "stereotactic space"
-    }
   ],
   "source_hash": "3ff2ee9749d7ed2273860f3d8e291d02b6b45259daa6de883b03359dcdf0b06e"
 }
