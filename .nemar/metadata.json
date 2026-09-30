@@ -2,7 +2,7 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Auditory Naming EC",
-  "description": "This dataset contains intracranial EEG recordings from 121 individuals who performed an auditory-naming task, with electrode coordinates provided in MNI-305 space. The data support analyses of whole-brain, millisecond-scale effective connectivity underlying speech processing, as reported by Kochi et al. (2025).",
+  "description": "This dataset contains intracranial EEG (iEEG) recordings from 121 individuals performing an auditory naming task. Electrode coordinates are provided in MNI-305 space, and each EDF file carries event markers for stimulus onset, stimulus offset, and response onset. The data were used in an analysis of whole-brain, millisecond-scale effective connectivity atlases of speech.",
   "methods_description": "Intracranial EEG recordings were collected while participants performed an auditory-naming task, with events tagged for stimulus onset (401), stimulus offset (402), and response onset (501). Electrode locations were co-registered to MNI-305 standard space.",
   "license": "CC0",
   "dataset_type": "raw",
@@ -20,24 +20,21 @@
   },
   "keywords": [
     {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
-    },
-    {
       "term": "intracranial EEG"
     },
     {
-      "term": "auditory naming task"
-    },
-    {
-      "term": "effective connectivity"
+      "term": "auditory naming"
     },
     {
       "term": "speech"
     },
     {
-      "term": "MNI-305 space"
+      "term": "effective connectivity"
+    },
+    {
+      "term": "Electrocorticography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D000069280"
     }
   ],
   "related_identifiers": [
@@ -68,7 +65,7 @@
     "ieeg"
   ],
   "sizes": [
-    "47.9 GB (385 files)"
+    "44.60 GB (385 files)"
   ],
   "formats": [
     ".edf",
