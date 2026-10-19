@@ -23,3 +23,9 @@ Rows were matched to header channels BY NAME, never by position (exact; then cas
 Applied by position, the former rows would have given wrong labels to 19153 channels in 384 files (rows missing, extra or out of order before that position).
 
 Bipolar data: in 381 files the data header holds bipolar derivations named after two contacts (e.g. `POL A1-A2`), while channels.tsv listed the monopolar contacts (`A1`, `A2`, ...). A derivation is not matched to the row of its first contact: each of the 18387 bipolar channels got its own row (type = the type of both contacts, `reference` = the second contact, columns shared by both contact rows copied, `status` bad when either contact was bad (6384 rows), good when both were good (12003 rows)), and the contact rows not recorded as such moved to `sourcedata/channels-removed-2026-10-18/`. electrodes.tsv (contact positions) is unchanged; a derivation `X-Y` lies between contacts X and Y.
+
+## Electrode locations (19 Oct 2026)
+
+Coordsystem.json Other -> MNI305/mm in 384 files (proposal A2, Lane G round 4). Evidence: README: "Electrode coordinates are provided in MNI-305 space." Paper bioRxiv 10.1101/2025.11.18.689014 (Methods, Intracranial electrodes): "Electrode coordinates were transformed into the FreeSurfer standard brain space"; x/y/z byte-identical to ds006234 (378/378 files) and on006233 (347/347), both README MNI-305, and to on007118-20 (fsaverage / mm). The former files said Other / "Post-implant CT coregistered to pre-implant MRI in patient-native RAS orientation." / mm, so MNE labelled the frame unknown instead of mni_tal.
+
+Full evidence per dataset: REPORT-ieeg-locations.md and ieeg_locations.json (Lane G, 19 Oct 2026). This dataset mirrors OpenNeuro; the same change belongs upstream. Local branch only.
