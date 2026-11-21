@@ -33,3 +33,11 @@ Primary source: this dataset's own README (line 3 of README.md on main, nemarDat
 Reproducible check (22 Oct 2026): for each of the 384 electrodes.tsv, every contact's x/y/z was compared (to 0.001 mm) with every electrodes.tsv of other deposits from the same group at pinned nemarDatasets commits (on004551@c4c035f6, on004859@db21ebb2, on005007@b59363aa, on005545@948f2825, on005931@cbd529e5, on006107@b37dcbfc, on006233@396692f0, on006914@1956b035, on007118@8f2c41fa, on007119@c099745b, on007120@66296ebd). 375 files have all contacts identical to one file of another deposit: 223 to a deposit whose coordsystem.json declares fsaverage/mm (on007118, on007119, on007120) and 375 to a deposit whose README states MNI305/MNI-305 (on004551, on005545, on006233, on006914); a file can match both. The other 9 match partly (5 with at least 89 % of contacts identical, 0 with 50-89 %, 4 below 50 %, 0 none).
 
 Limitation: these sidecars declare the frame and units only. electrodes.tsv is unchanged and no coordinate value changed. Positions do not attach to channels in mne_bids or EEGDash, because the channel names (data-header labels, e.g. prefixed labels or bipolar derivations) differ from the contact names in electrodes.tsv; a channel-to-contact mapping is not part of this change. This dataset mirrors OpenNeuro; the same change belongs upstream.
+
+## Electrode coordinate frame (20 Nov 2026)
+
+The coordsystem.json files declare `fsaverage` (millimeters) instead of `MNI305`.
+Every contact's x/y/z in the 384 electrodes.tsv (43023 contacts) equals a vertex of the FreeSurfer fsaverage pial surface (left or right hemisphere) within 0.001 mm, which is the signature of FreeSurfer surface-based normalization to the fsaverage template.
+The volumetric frame of fsaverage is FreeSurfer's MNI305 space, which is why the README above calls the space MNI-305.
+The earlier description "Post-implant CT coregistered to pre-implant MRI in patient-native RAS orientation" did not match the coordinates and is gone.
+No coordinate value changed.
